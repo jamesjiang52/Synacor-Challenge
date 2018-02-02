@@ -1,7 +1,7 @@
 from break_ import Break_
 
 class Instruction:
-    player_actions = iter([action.rstrip('\n') for action in open('C:\\Users\\James Jiang\\Documents\\Synacor Challenge\\player.txt')])
+    player_actions = iter([action.rstrip('\n') for action in open('C:\\Users\\James Jiang\\Documents\\Synacor Challenge\\auto_player.txt')])
 
     def __init__(self, memory, registers):
         self.memory = memory

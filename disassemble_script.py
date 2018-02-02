@@ -1,26 +1,12 @@
 def register(string_value):
-    if string_value == '32768':
-        return('r0')
-    elif string_value == '32769':
-        return('r1')
-    elif string_value == '32770':
-        return('r2')
-    elif string_value == '32771':
-        return('r3')
-    elif string_value == '32772':
-        return('r4')
-    elif string_value == '32773':
-        return('r5')
-    elif string_value == '32774':
-        return('r6')
-    elif string_value == '32775':
-        return('r7')
+    if int(string_value) in range(32768, 32776):
+        return('r' + str(int(string_value) - 32768))
     else:
         return(string_value)
 
 if __name__ == '__main__':
 
-    with open('C:\\Users\\James Jiang\\Documents\\Synacor Challenge (Python 3)\\challenge.bin', 'rb') as f:
+    with open('C:\\Users\\James Jiang\\Documents\\Synacor Challenge\\challenge.bin', 'rb') as f:
         memory = [0 for i in range(2**15)]
         byte = f.read(2)
         i = 0
@@ -30,7 +16,7 @@ if __name__ == '__main__':
             byte = f.read(2)
             i += 1
 
-    with open('C:\\Users\\James Jiang\\Documents\\Synacor Challenge (Python 3)\\disassembled.txt', 'w') as disassembled:
+    with open('C:\\Users\\James Jiang\\Documents\\Synacor Challenge\\disassembled.txt', 'w') as disassembled:
         memory_index = 0
         while memory_index in range(len(memory)):
             if memory[memory_index] == 0:

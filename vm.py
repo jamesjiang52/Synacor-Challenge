@@ -24,7 +24,6 @@ if __name__ == '__main__':
             if instruction.memory_address == 5489:
                 instruction.registers[32768] = 6
                 instruction.memory_address += 2
-                test = 1
             exec_instruction = instruction.register_value(instruction.memory[instruction.memory_address])
             Instruction.operations[exec_instruction](instruction)
     except Break_:
