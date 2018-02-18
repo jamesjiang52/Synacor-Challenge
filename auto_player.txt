@@ -1,3 +1,5 @@
+take tablet
+use tablet
 doorway
 north
 north
@@ -46,6 +48,7 @@ use concave coin
 use corroded coin
 north
 take teleporter
+use teleporter
 fix teleporter
 use teleporter
 north
@@ -71,3 +74,5 @@ north
 north
 east
 vault
+take mirror
+use mirror
